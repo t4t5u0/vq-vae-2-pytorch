@@ -13,7 +13,7 @@ train_vqvae.py and vqvae.py now supports distributed training. You can use --n_g
 * PyTorch >= 1.1
 * lmdb (for storing extracted codes)
 
-[Checkpoint of VQ-VAE pretrained on FFHQ](vqvae_560.pt)
+[Checkpoint of VQ-VAE pretrained on FFHQ](vq-vae-2-pytorch/vqvae_560.pt)
 
 ## Usage
 
