@@ -6,6 +6,9 @@ authors = ["Your Name <you@example.com>"]
 readme = "README.md"
 packages = [{include = "vq_vae_2_pytorch"}]
 
+[tool.taskipy.tasks]
+train = { cmd = "python vq_vae_2_pytorch/train_vqvae.py normalize_256_256", help = "Train the model" }
+
 [tool.poetry.dependencies]
 python = "^3.9"
 torch = { url = "https://download.pytorch.org/whl/cu117/torch-1.13.0%2Bcu117-cp39-cp39-win_amd64.whl"}
@@ -13,6 +16,9 @@ torchvision = { url = "https://download.pytorch.org/whl/cu117/torchvision-0.14.0
 lmdb = "^1.3.0"
 tqdm = "^4.64.1"
 apex = "^0.9.10.dev0"
+
+[tool.poetry.group.dev.dependencies]
+taskipy = "^1.10.3"
 
 [build-system]
 requires = ["poetry-core"]
